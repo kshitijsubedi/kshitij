@@ -91,7 +91,8 @@ async function question() {
 }
 
 async function api() {
-  const res = await p({ url: "https://api.devexcus.es", parse: "json" });
+  const res = await fetch("https://api.devexcus.es");
+  console.log(res)
   quote = res.body.text;
   return;
 }
